@@ -1,0 +1,58 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+$background-color :#555;
+$background-item :#fff;
+@mixin items {
+    background-color: $background-item;
+    margin: 15px;
+    padding: 50px;
+    width: 150px;
+}
+
+.container {
+    height: 500px;
+    background-color: $background-color;
+    padding: 10px;
+    display: flex;
+    //align-items: center;
+    //justify-content: center;
+    .item {
+        @include items;
+        margin-left: auto;
+        text-align: center;
+        //flex-grow: 1; // satır da kapladığı alan tüm satırı kaplar
+        //flex-basis: 20%; // satır da kapladığı alanın yüzdelik olarak ne kadar alan kaplayacağı
+        //flex-shrink: 0; / item ın daralmasını istediğimiz veya istemediğimiz zaman
+    }
+    //.i2 {
+    //align-self: stretch;
+    //flex-grow: 2; // diğer itemlardan 2 kat daha fazla alan kaplar
+    //}
+    //.i3 {
+    //height: 300px;
+    // }
+    //.i4 {
+    //align-self: flex-end;
+    // }
+    // .i5 {
+    //align-self: flex-start;
+    //order: -1 // item sırasını belirler
+    // }
+}
+
+//justify-content: center; //elemanları yatayda hizalar
+//justify-content: flex-start; // başlangıca hizalar
+//justify-content: flex-end;// sona hizalar
+//justify-content: space-between; // Her eleman arasında eşit olarak hizalar başlangıc ve bitiş hariç.
+//justify-content: space-around; // Her eleman arasında eşit olarak hizalar başlangıç ve bitiş yarısı kadar x-2x
+//justify-content: space-evenly; //Her eleman arasında eşit olarak hizalar
+//align-items: stretch;
+//align-items: center;
+//align-items: flex-start;
+//align-items: flex-end;
+//align-items: center; //içeriğe göre sıralar
+//flex-direction: column; 
+//flex-wrap: wrap;
